@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8)), url(Imagenes/homestudio.jpeg);
+    background-size: cover;
+ }
+
+
+/*HEAD*/
+header {
+    display: flex;  /* HACE QUE EL CONTENIDO DEL ENCABEZADO ESTE HORIZONTAL*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: linear-gradient( to right, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    backdrop-filter: blur(15px); /*Desenfoque de encabezado*/
+    box-shadow: 0 2px 20px rgba(113, 159, 207, 0.2); 
+    
+}
+
+.Logo-Titulo {
+    display: flex;
+    align-items: center; /*centrando logo y titulo*/
+
+}
+.logo {
+    width: 120px; /*tamaño de logo*/
+    height: auto; /*proporcion de imagen*/
+    margin-right: 10px; /*espacio entre logo y Titulo*/ 
+    transition: 0.3s ease;
+        
+}
+.logo:hover {
+    filter: drop-shadow(0 0 8px #b8eaff);/*EFECTO QUE ILUMINA el logo al tocar con el mouse*/
+}
+
+h1{   
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-size: 35px; 
+    background: linear-gradient(to right, #d9dada, #93acd9);
+    background-clip: text;/*aqui estoy diciendole que el degradado solo quiero que aparezca en la forma del texto*/
+    -webkit-background-clip: text; /*este es solo para que muestre el degradado en otros navegadore tambien */
+    color: transparent;   
+}
+
+.menu-principal ul { 
+    list-style: none; /*para quitar puntos o numeros de la lista de navegacion*/
+    display: flex; /*poniendo lista de navegacion horizontal*/
+    gap: 30px;    /*espacio entre los enlaces*/
+    padding: 0;
+    margin-right: 50px;
+     
+}
+
+.menu-principal a {
+    font-family: 'League Spartan', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 20px; /*tamaño de letra*/   
+    color: #c7c9ca;
+    font-weight: 550; /*grosor de letras*/
+    text-decoration: none;
+    transition:0.3s ease;
+}
+.menu-principal a:hover {
+    text-shadow: 0 0 8px #b8eaff; /*EFECTO QUE ILUMINA el menu al tocar*/
+}
+
+
+
+/*MAIN...*/
+
+#Inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    max-width: 1400px;
+    margin: 0 auto;   
+}
+
+.Video-container video{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Video-container{
+    flex:1;
+}
+
+.quienes-somos{
+    flex: 1;
+}
+
+
+
+.container-productores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.container-productores h2{
+    color: white;
+   text-shadow: 0 0 15px  #b8eaff;
+
+}
+#Productores img{
+  width: 500px;
+  border-radius: 40px;
+  
+}
+
+  
+
+
+
+
+
+
+h2 {
+    color:rgb(230, 227, 227);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:50px;
+    text-align: center;
+}
+.Destacado{
+   color: white;
+   text-shadow: 0 0 15px  #b8eaff;
+     
+}
+
+ p{
+  color:rgb(230, 227, 227);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  text-align: center;
+    
+}
+
