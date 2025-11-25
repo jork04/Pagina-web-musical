@@ -20,12 +20,49 @@ header {
     box-shadow: 0 2px 20px rgba(113, 159, 207, 0.2); 
     
 }
+.menu-toggle{
+    display: none;
+}
+
+.menu-icono {
+    width: 35px;
+    cursor: pointer;
+}
+
+.menu-principal {
+    display: none;
+}
+
+#menu:checked ~ .menu-principal {
+    display: block;
+}
+
+@media (min-width: 768px){
+    .menu-icono{
+        display: none;
+    }
+    .menu-principal{
+        display: block;
+    }
+}
 
 .Logo-Titulo {
     display: flex;
     align-items: center; /*centrando logo y titulo*/
 
 }
+
+@media (max-width: 768px){
+    .Logo-Titulo{ 
+       transform: scale(0.90);
+    }
+}
+
+
+
+
+
+
 .logo {
     width: 120px; /*tamaño de logo*/
     height: auto; /*proporcion de imagen*/
