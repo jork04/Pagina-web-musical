@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     margin: 0;
@@ -9,12 +11,32 @@ body {
  }
 
 
+ h2 {
+    color:rgb(230, 227, 227);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:50px;
+    text-align: center;
+}
+
+
+ p{
+  color:rgb(230, 227, 227);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 20px;
+    
+}
+
 /*HEAD*/
-header {
+
+
+.contenedor-header {
     display: flex;  /* HACE QUE EL CONTENIDO DEL ENCABEZADO ESTE HORIZONTAL*/
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px 10px;
     background: linear-gradient( to right, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
     backdrop-filter: blur(15px); /*Desenfoque de encabezado*/
     box-shadow: 0 2px 20px rgba(113, 159, 207, 0.2); 
@@ -43,6 +65,7 @@ header {
     }
     .menu-principal{
         display: block;
+        
     }
 }
 
@@ -54,13 +77,21 @@ header {
 
 @media (max-width: 768px){
     .Logo-Titulo{ 
-       transform: scale(0.90);
+       transform: scale(0.85);
     }
+    #Inicio {
+        flex-direction : column;
+    }
+    .Video-container{
+       order:2;
+    }
+
+    .quienes-somos{
+      order: 1;
+    }
+   
+    
 }
-
-
-
-
 
 
 .logo {
@@ -80,8 +111,10 @@ h1{
     background: linear-gradient(to right, #d9dada, #93acd9);
     background-clip: text;/*aqui estoy diciendole que el degradado solo quiero que aparezca en la forma del texto*/
     -webkit-background-clip: text; /*este es solo para que muestre el degradado en otros navegadore tambien */
-    color: transparent;   
+    color: transparent; 
+      
 }
+
 
 .menu-principal ul { 
     list-style: none; /*para quitar puntos o numeros de la lista de navegacion*/
@@ -122,6 +155,7 @@ h1{
     max-width: 400px;
     height: auto;
     border-radius: 10px;
+    margin-top: 30px;
 }
 
 .Video-container{
@@ -134,48 +168,124 @@ h1{
 
 
 
-.container-productores{
+
+/*productores*/
+.cards-productores{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
+    flex-wrap: wrap; 
 }
-.container-productores h2{
+
+.Destacado{
+    text-align: center;
     color: white;
-   text-shadow: 0 0 15px  #b8eaff;
+    text-shadow: 0 0 15px  #b8eaff;     
+}
+
+.card-productor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card-productor:hover {
+    filter: drop-shadow(0 0 20px #373636);
 
 }
+
+
+ .card-titulo{
+   color:rgb(230, 227, 227);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size:50px;
+   text-align: center;
+   margin-bottom: 5px;
+   max-width: 1400px;
+   text-shadow: 0 0 5px  #b8d3ff;
+
+ } 
+
 #Productores img{
-  width: 500px;
+  width: 400px;
+  height: auto;
   border-radius: 40px;
   
 }
 
-  
-
-
-
-
-
-
-h2 {
-    color:rgb(230, 227, 227);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:50px;
-    text-align: center;
-}
-.Destacado{
-   color: white;
-   text-shadow: 0 0 15px  #b8eaff;
-     
+.boton-conoceme{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fa1e3b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size:20px; 
+    font-weight: bold;
+    color: rgb(255, 252, 252); 
+    cursor: pointer; 
+    text-decoration: NONE;      
 }
 
- p{
-  color:rgb(230, 227, 227);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
-  text-align: center;
+.boton-conoceme:hover{
+    background-color: #c1142c;
+}
+
+
+
+.modal{
+    
+    display: none; /* Oculto al cargar la pagina */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+   
+    
     
 }
+
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.85)), url(Imagenes/fondo\ azul.jpg);
+    background-size: contain;
+    padding: 40px;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    width: 90%;   
+    max-width: 450%;
+    max-height: 90vh;
+    overflow-y: auto;
+    
+   
+}
+.modal-content img{
+    max-width: 350px;
+    max-height: 60vh;
+}
+
+.close{
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    font-size: 35px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+
+
+
+
+
+
 
