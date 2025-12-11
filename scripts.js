@@ -12,3 +12,13 @@ document.querySelectorAll('.close').forEach(btn => {
     });
 });
 
+
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal){
+            modal.style.display = 'none';
+        }
+        
+    });
+});
+

@@ -170,6 +170,12 @@ h1{
 
 
 /*productores*/
+
+#Productores{
+    margin-top: 50px;
+}
+
+
 .cards-productores{
     display: flex;
     justify-content: center;
@@ -191,10 +197,12 @@ h1{
     padding: 30px;
     transition: 0.3s;
     text-align: center;
+    cursor: pointer;
 }
 
 .card-productor:hover {
     filter: drop-shadow(0 0 20px #373636);
+    transform: translateY(-6px);
 
 }
 
@@ -215,11 +223,13 @@ h1{
   height: auto;
   border-radius: 40px;
   
+  
+  
 }
 
 .boton-conoceme{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fa1e3b;
+    background-color: #f31a2c;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -227,11 +237,14 @@ h1{
     font-weight: bold;
     color: rgb(255, 252, 252); 
     cursor: pointer; 
-    text-decoration: NONE;      
+    text-decoration: NONE;    
+    box-shadow: 0 0 15px rgba(144, 2, 56, 0.5);  
 }
 
 .boton-conoceme:hover{
     background-color: #c1142c;
+    
+    
 }
 
 
@@ -244,6 +257,7 @@ h1{
     background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
+    z-index: 9999;
    
     
     
@@ -282,6 +296,61 @@ h1{
     color: aliceblue;
 }
 
+
+/*Contactos*/
+
+#Contactos{
+margin-top: 120px;
+margin-bottom: 50px; 
+    
+}
+
+.container-contactos{ 
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+
+.contacto-item img{
+    width: 55px;
+}
+
+.contacto-info{
+    text-align: left;
+
+}
+
+.contacto-item a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color:rgb(230, 227, 227);
+    background: rgba(255,255,255,0.08);
+    padding: 15px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 12px rgba(2, 135, 135, 0.5);
+    transition: 0.3s ease;
+
+}
+
+.contacto-item a:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(2, 135, 135, 0.5);
+
+}
+
+
+.contacto-info p{
+    font-size: 25px;
+   
+}
 
 
 
