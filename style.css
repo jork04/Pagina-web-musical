@@ -2,11 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8)), url(Imagenes/homestudio.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.9)), url(Imagenes/homestudio.jpeg);
     background-size: cover;
  }
 
@@ -14,8 +15,24 @@ body {
  h2 {
     color:rgb(230, 227, 227);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size:50px;
+    font-size:45px;
     text-align: center;
+}
+
+h3{
+    color:rgb(230, 227, 227);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:30px;
+    text-align: center;
+
+}
+h4{
+    
+    color:rgb(230, 227, 227);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:35px;
+    text-align: center;
+
 }
 
 
@@ -33,15 +50,48 @@ body {
 
 
 .contenedor-header {
+    
+    width: 100%;
     display: flex;  /* HACE QUE EL CONTENIDO DEL ENCABEZADO ESTE HORIZONTAL*/
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    box-sizing: border-box;
     background: linear-gradient( to right, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
     backdrop-filter: blur(15px); /*Desenfoque de encabezado*/
     box-shadow: 0 2px 20px rgba(113, 159, 207, 0.2); 
     
 }
+
+.Logo-Titulo {
+    display: flex;
+    align-items: center; /*centrando logo y titulo*/
+    
+
+}
+
+.logo {
+    width: 100px; 
+    height: auto; 
+    margin-right: 10px; /*espacio entre logo y Titulo*/ 
+    transition: 0.3s ease;
+        
+}
+.logo:hover {
+    filter: drop-shadow(0 0 8px #b8eaff);/*EFECTO QUE ILUMINA el logo al tocar con el mouse*/
+}
+
+.Logo-Titulo h1{   
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-size: 25px;
+    margin: 0; 
+    background: linear-gradient(to right, #d9dada, #93acd9);
+    background-clip: text;/*aqui estoy diciendole que el degradado solo quiero que aparezca en la forma del texto*/
+    -webkit-background-clip: text; /*este es solo para que muestre el degradado en otros navegadore tambien */
+    color: transparent; 
+      
+}
+
 .menu-toggle{
     display: none;
 }
@@ -49,6 +99,7 @@ body {
 .menu-icono {
     width: 35px;
     cursor: pointer;
+    
 }
 
 .menu-principal {
@@ -59,9 +110,12 @@ body {
     display: block;
 }
 
+
+
 @media (min-width: 768px){
     .menu-icono{
         display: none;
+        
     }
     .menu-principal{
         display: block;
@@ -69,18 +123,13 @@ body {
     }
 }
 
-.Logo-Titulo {
-    display: flex;
-    align-items: center; /*centrando logo y titulo*/
-
-}
-
 @media (max-width: 768px){
     .Logo-Titulo{ 
        transform: scale(0.85);
+       
     }
     #Inicio {
-        flex-direction : column;
+        flex-direction : column; 
     }
     .Video-container{
        order:2;
@@ -94,26 +143,7 @@ body {
 }
 
 
-.logo {
-    width: 120px; /*tamaño de logo*/
-    height: auto; /*proporcion de imagen*/
-    margin-right: 10px; /*espacio entre logo y Titulo*/ 
-    transition: 0.3s ease;
-        
-}
-.logo:hover {
-    filter: drop-shadow(0 0 8px #b8eaff);/*EFECTO QUE ILUMINA el logo al tocar con el mouse*/
-}
 
-h1{   
-    font-family: "BBH Sans Bartle", sans-serif;
-    font-size: 35px; 
-    background: linear-gradient(to right, #d9dada, #93acd9);
-    background-clip: text;/*aqui estoy diciendole que el degradado solo quiero que aparezca en la forma del texto*/
-    -webkit-background-clip: text; /*este es solo para que muestre el degradado en otros navegadore tambien */
-    color: transparent; 
-      
-}
 
 
 .menu-principal ul { 
@@ -136,6 +166,10 @@ h1{
 .menu-principal a:hover {
     text-shadow: 0 0 8px #b8eaff; /*EFECTO QUE ILUMINA el menu al tocar*/
 }
+
+
+
+
 
 
 
@@ -169,10 +203,84 @@ h1{
 
 
 
+
+/*Servicios*/
+
+#Servicios{
+    
+    margin-top: 50px;
+    padding: 80px 20px;
+    
+}
+
+.container-servicios{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    
+    
+}
+.titulo-servicio{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    
+}
+
+.card-servicio{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+   
+    
+    opacity: 0;  
+    transition: all 0.4s ease;
+    
+
+}
+.card:hover .titulo-servicio{
+    opacity: 0;
+    
+}
+.card:hover .card-servicio{
+    opacity: 1;
+
+}
+.card-servicio p{
+    font-size: 22px;
+    
+}
+
+
+
+
+
 /*productores*/
 
 #Productores{
-    margin-top: 50px;
+   
+    margin-top: 100px;
 }
 
 
@@ -219,7 +327,7 @@ h1{
  } 
 
 #Productores img{
-  width: 400px;
+  width: 350px;
   height: auto;
   border-radius: 40px;
   
